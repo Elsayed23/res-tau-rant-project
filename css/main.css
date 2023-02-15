@@ -1,0 +1,377 @@
+/* Start Global Rules */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-family: sans-serif;
+}
+::-webkit-scrollbar {
+    width: 19px;
+    background-color: gray;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  :root {
+    --section-padding: 80px;
+    --main-color: #dd5903;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* End Global Rules */
+/* Start Section */
+.sec {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.sec .container .top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.sec .container .top::before {
+    content: '';
+    position: absolute;
+    left: calc(50% - 2px);
+    width: 2px;
+    height: 100%;
+    background-color: #dfdbdc;
+}
+.sec .container .top .left-t {
+    display: flex;
+    flex-direction: column;    
+}
+.sec .container .top .left-t h2 {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+.sec .container .top .left-t h1 {
+    color: #000000;
+    font-size: 50px;
+    font-family: Garamond, serif;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+.sec .container .top .left-t p {
+    color: gray;
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 520px;
+}
+.sec .container .top .left-t:first-child p {
+    margin-bottom: 40px;
+}
+.sec .container .top .left-t a {
+    color: gray;
+    display: block;
+    width: fit-content;
+    transition: .3s;
+}
+.sec .container .top .left-t a:hover {
+    color: var(--main-color);
+}
+.sec .container .top .left-t a:not(:last-child) {
+    margin-bottom: 20px;
+}
+.sec .container .top .left-t button {
+    display: block;
+    width: fit-content;
+    background-color: var(--main-color);
+    padding: 13px 30px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    border: none;
+    transition: .3s;
+    color: #fff;
+    margin-top: 25px;
+}
+.sec .container .top .left-t button::before {
+    content: '';
+    background-color: var(--main-color);
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: .3s ease;
+}
+.sec .container .top .left-t button:hover::before {
+    left: 0;
+    width: 100%;
+}
+.sec .container .top .left-t button:hover {
+    color: var(--main-color);
+    background-color: #fff;
+}
+.sec .container .top .right-t img {
+    max-height: 700px;
+}
+/* End Section */
+/* Start Contact */
+.contact {
+    background-color: #faf9f8;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+}
+.contact .container .left h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+.contact .container .left h1 {
+    margin: 50px 0;
+    font-size: 50px;
+    font-weight: normal;
+    font-family: Garamond, serif;
+    text-transform: uppercase;
+}
+.contact .container .left span,
+.contact .container .left span a {
+    color: gray;
+    font-size: 18px;
+    transition: .3s;
+}
+.contact .container .left span a:hover {
+    color: var(--main-color);
+}
+.contact .container .left span {
+    margin: 30px 0;
+    display: block;
+}
+.contact .container .left h3 {
+    color: rgb(67, 57, 57);
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.contact .container .left .Time {
+    color: gray;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+.contact .container .left > a {
+    color: #363636;
+    position: relative;
+    padding-bottom: 10px;
+}
+.contact .container .left > a::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .4s;
+    width: 100%;
+    height: 2px;
+}
+.contact .container .left > a:hover::before {
+    left: 50%;
+    width: 0;
+}
+.contact .container .right form .top .in {
+    display: flex;
+    flex-direction: column;
+}
+.contact .container .right form .top {
+    display: flex;
+}
+.contact .container .right form .top .in label {
+    font-size: 21px;
+    font-style: italic;
+}
+.contact .container .right form .top .in input {
+    width: 255px;
+    height: 50px;
+    border: none;
+    font-size: 17px;
+    caret-color: var(--main-color);
+    color: var(--main-color);
+    transition: .5s;
+    background-color: transparent;
+    border-bottom: solid 1.5px rgb(93, 83, 83);
+}
+.contact .container .right form .top .in input[type="text"] {
+    margin-right: 20px;
+}
+.contact .container .right form .top .in input:focus {
+    outline: none;
+    border-bottom: solid 1.5px var(--main-color);
+}
+.contact .container .right form .down {
+    margin: 50px 0 0;
+}
+.contact .container .right form .down label {
+    font-size: 21px;
+    font-style: italic;
+}
+.contact .container .right form .down input {
+    height: 50px;
+    border: none;
+    caret-color: var(--main-color);
+    color: var(--main-color);
+    transition: .5s;
+    font-size: 17px;
+    background-color: transparent;
+    border-bottom: solid 1.5px rgb(93, 83, 83);
+    width: 100%;
+}
+.contact .container .right form .down input:focus {
+    outline: none;
+    border-bottom: solid 1.5px var(--main-color);
+}
+.contact .container .right form .down .in:first-child  {
+    margin-bottom: 50px;
+}
+.contact .container .right form .down .in .t-a {
+    height: 100px;
+}
+.contact .container .right form .down > a {
+    padding: 13px 25px;
+    background-color: var(--main-color);
+    margin-top: 30px;
+    border-radius: 9px;
+    position: relative;
+    font-size: 22px;
+    transition: .3s;
+    color: #ffffff;
+    display: block;
+    width: fit-content;
+}
+.contact .container .right form .down > a::before {
+    content: '';
+    background-color: var(--main-color);
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: .3s ease;
+}
+.contact .container .right form .down > a:hover::before {
+    left: 0;
+    width: 100%;
+}
+.contact .container .right form .down > a:hover {
+    background-color: #ffffff;
+    color: var(--main-color);
+}
+/* End Contact */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .sec .container .top .right-t img {
+        max-height: 530px;
+    }
+    .sec .container .top .left-t p {
+        font-size: 17.5px;
+    }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+    .sec .container .top .left-t {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sec .container .top {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .sec .container .top .left-t p {
+        max-width: 100%;
+    }
+    .sec .container .top .right-t img {
+        margin-bottom: 15px;
+    }
+    .contact .container {
+        flex-direction: column;
+    }
+    .contact .container .right {
+        margin-top: 65px;
+    }
+}
+@media (max-width: 767px) {
+    .sec .container .top .left-t {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sec .container .top {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .sec .container .top .left-t p {
+        max-width: 100%;
+    }
+    .sec .container .top .right-t img {
+        margin-bottom: 15px;
+        max-height: 455px;
+    }
+    .sec .container .top .left-t a {
+        font-size: 18px;
+    }
+    .contact .container {
+        flex-direction: column;
+    }
+    .contact .container .right {
+        margin-top: 65px;
+    }
+    .contact .container .right form .top {
+        flex-direction: column;
+    }
+    .contact .container .right form .top .in:first-child {
+        margin-bottom: 50px;
+    }
+    .contact .container .right form .top .in input {
+        width: 100%;
+    }
+    .contact .container .right form .top .in input[type="text"] {
+        margin-right: 0;
+    }
+}
+@media (max-width: 1199px) {
+    .sec .container .top::before {
+        display: none;
+    }
+}
